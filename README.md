@@ -4,3 +4,6 @@ Welcome back again to another companion lab to the PowerPoint presentation! This
 
 ---
 
+## Branching
+### Master Branch Protection
+On the GitHub page for the new repository you forked, let’s set up protection for the `master` branch to ensure only quality code makes it into that branch (but mostly just as an example).
