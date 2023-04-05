@@ -7,15 +7,19 @@ Welcome back again to another companion lab to the PowerPoint presentation! This
 ## Branching
 ### Master Branch Protection
 On the GitHub page for the new repository you forked, let’s set up protection for the `master` branch to ensure only quality code makes it into that branch (but mostly just as an example). Head over to the settings for your forked repository:
+
 ![image](https://user-images.githubusercontent.com/70546234/229968214-dd808672-31c3-4df9-97d4-7fd6c0386994.png)
 
 Head down to the "Branches" section:
+
 ![image](https://user-images.githubusercontent.com/70546234/229971198-121e3e0d-a419-4224-bb82-285a2867a51b.png)
 
 And add a branch protection rule:
+
 ![image](https://user-images.githubusercontent.com/70546234/229971290-fd860c0c-192f-414b-9658-6cd245a7fbb9.png)
 
 And set it up for branch `master`, requiring a pull request before code can make it into this branch:
+
 ![image](https://user-images.githubusercontent.com/70546234/229971468-f8922b96-2558-432d-a49a-2efe5a7af17b.png)
 
 In an ideal scenario, you'd be requiring approvals before the PR can be merged, but for this tutorial, since you'll be merging your own pull requests (and GitHub won't let you approve your own PRs), we'll have to leave that un-checked. Click "Create," and you'll no longer be able to push straight to the master branch:
