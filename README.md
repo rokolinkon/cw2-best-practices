@@ -39,8 +39,12 @@ For this exercise, let’s make a feature branch and call it `oop-refactor`, for
 Let’s create an Issue for a feature we’re about to add. On the GitHub page for your repository, click “Issues.”
 
 ![image](https://user-images.githubusercontent.com/70546234/230183191-681529ef-ee5d-4171-9f14-02a003b7643b.png)
-![image](https://user-images.githubusercontent.com/70546234/230184409-e7d06650-23d7-45d3-a23f-542a8a8f8574.png)
+
 
 Then "New issue"
 
 ![image](https://user-images.githubusercontent.com/70546234/230183343-448f771a-c527-401b-a86d-27fa07273854.png)
+
+And add a title and description, plus give it the “enhancement” label.
+
+![image](https://user-images.githubusercontent.com/70546234/230184409-e7d06650-23d7-45d3-a23f-542a8a8f8574.png)
