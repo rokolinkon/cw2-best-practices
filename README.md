@@ -22,4 +22,10 @@ And set it up for branch `master`, requiring a pull request before code can make
 
 ![image](https://user-images.githubusercontent.com/70546234/229971468-f8922b96-2558-432d-a49a-2efe5a7af17b.png)
 
-In an ideal scenario, you'd be requiring approvals before the PR can be merged, but for this tutorial, since you'll be merging your own pull requests (and GitHub won't let you approve your own PRs), we'll have to leave that un-checked. Click "Create," and you'll no longer be able to push straight to the master branch:
+In an ideal scenario, you'd be requiring approvals before the PR can be merged, but for this tutorial, since you'll be merging your own pull requests (and GitHub won't let you approve your own PRs), we'll have to leave that un-checked. Click "Create," and you'll no longer be able to force a push straight to the master branch:
+
+![image](https://user-images.githubusercontent.com/70546234/229973052-d245586b-af5d-4b12-b33c-b9991c277bbd.png)
+
+And when you try to push normally, you'll get a warning:
+
+![image](https://user-images.githubusercontent.com/70546234/229973109-45b3a695-9d61-4bf3-a10a-937030e1acdc.png)
