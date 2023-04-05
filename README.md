@@ -33,4 +33,7 @@ And when you try to push normally, you’ll get a warning:
 So, to comply with this new rule, let’s make a new branch, for example… `git checkout -b dev && git push —set-upstream origin dev`. We’ll need this to make pull requests on later. 
 
 ### Feature Branching
-Throughout this lab, every time you make a change to the code, we’ll make a new branch as if it was a “feature.” For now, we won’t be making any changes, but stay tuned!
+For this exercise, let’s make a feature branch and call it `oop-refactor`, for a step later on. At the end, we will merge this back into `dev` and make a PR from `dev` to `master`.
+
+### Card Tracking
+Let’s create an Issue for a feature we’re about to add. On the GitHub page for your repository, click “Issues.”
