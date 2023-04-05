@@ -51,4 +51,5 @@ And add a title and description, plus give it the “enhancement” label.
 
 And create the issue! Or, if you use the CLI, you can do this all in one command:
 `gh issue create --label enhancement -t <title> -b <body>`
+
 ![image](https://user-images.githubusercontent.com/70546234/230190022-95c816c9-1f25-4a04-864a-b3abba55d096.png)
