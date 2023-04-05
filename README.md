@@ -56,3 +56,4 @@ And create the issue! Or, if you use the CLI, you can do this all in one command
 
 
 ## Clean Code
+In the root of this repository is a file called `clean_code.py` with some code in it that is considerably _not_ clean. Still on our `clean-code` branch, refactor this file to better follow some PEP 8 standards:
