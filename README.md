@@ -33,9 +33,9 @@ And when you try to push normally, you’ll get a warning:
 So, to comply with this new rule, let’s make a new branch, for example… `git checkout -b dev && git push —set-upstream origin dev`. We’ll need this to make pull requests on later. 
 
 ### Feature Branching
-For this exercise, let’s make a feature branch and call it `oop-refactor`, for a step later on. At the end, we will merge this back into `dev` and make a PR from `dev` to `master`.
+For this exercise, let’s make a feature branch and call it `clean-code`, for a step later on. At the end, we will merge this back into `dev` and make a PR from `dev` to `master`.
 
-### Card Tracking
+## Card Tracking
 Let’s create an Issue for a feature we’re about to add. On the GitHub page for your repository, click “Issues.”
 
 ![image](https://user-images.githubusercontent.com/70546234/230183191-681529ef-ee5d-4171-9f14-02a003b7643b.png)
@@ -53,3 +53,6 @@ And create the issue! Or, if you use the CLI, you can do this all in one command
 `gh issue create --label enhancement -t <title> -b <body>`
 
 ![image](https://user-images.githubusercontent.com/70546234/230190022-95c816c9-1f25-4a04-864a-b3abba55d096.png)
+
+
+## Clean Code
