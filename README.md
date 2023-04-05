@@ -10,7 +10,7 @@ On the GitHub page for the new repository you forked, let’s set up protection 
 
 ![image](https://user-images.githubusercontent.com/70546234/229968214-dd808672-31c3-4df9-97d4-7fd6c0386994.png)
 
-Head down to the "Branches" section:
+Head down to the “Branches” section:
 
 ![image](https://user-images.githubusercontent.com/70546234/229971198-121e3e0d-a419-4224-bb82-285a2867a51b.png)
 
@@ -31,3 +31,6 @@ And when you try to push normally, you’ll get a warning:
 ![image](https://user-images.githubusercontent.com/70546234/229973109-45b3a695-9d61-4bf3-a10a-937030e1acdc.png)
 
 So, to comply with this new rule, let’s make a new branch, for example… `git checkout -b dev && git push —set-upstream origin dev`. We’ll need this to make pull requests on later. 
+
+### Feature Branching
+Throughout this lab, every time you make a change to the code, we’ll make a new branch as if it was a “feature.” For now, we won’t be making any changes, but stay tuned!
