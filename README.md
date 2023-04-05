@@ -48,3 +48,6 @@ Then "New issue"
 And add a title and description, plus give it the “enhancement” label.
 
 ![image](https://user-images.githubusercontent.com/70546234/230184409-e7d06650-23d7-45d3-a23f-542a8a8f8574.png)
+
+And create the issue! Or, if you use the CLI, you can do this all in one command:
+`gh issue create --label enhancement -t <title> -b <body>`
