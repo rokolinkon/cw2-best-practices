@@ -30,7 +30,7 @@ And when you try to push normally, you’ll get a warning:
 
 ![image](https://user-images.githubusercontent.com/70546234/229973109-45b3a695-9d61-4bf3-a10a-937030e1acdc.png)
 
-So, to comply with this new rule, let’s make a new branch, for example… `git checkout -b dev && git push —set-upstream origin dev`. We’ll need this to make pull requests on later. 
+So, to comply with this new rule, let’s make a new branch, for example… `git checkout -b dev && git push --set-upstream origin dev`. We’ll need this to make pull requests on later. 
 
 ### Feature Branching
 For this exercise, let’s make a feature branch and call it `clean-code`, for a step later on. At the end, we will merge this back into `dev` and make a PR from `dev` to `master`.
