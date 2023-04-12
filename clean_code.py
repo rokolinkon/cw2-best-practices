@@ -44,14 +44,14 @@ def to(n):
     if n<4000:
         if n>0:
             r=str()
-            thou=tuple(("".ljust(x,"M")for x in range(4)))#('', 'M', 'MM', 'MMM')
-            h=tuple(("".ljust(x,"C")for x in range(4)))+("CD",)+tuple(("D".ljust(x+1,"C")for x in range(4)))+("CM",)#('', 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM')
-            t=tuple(("".ljust(x,"X")for x in range(4)))+tuple(("L".rjust(2,"X")if x==0 else "L".ljust(x,"X")for x in range(5)))+("XC",)#('', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC')
-            o=tuple(("".ljust(x,"I")for x in range(4)))+tuple(("V".rjust(2,"I")if x==0 else "V".ljust(x,"I")for x in range(5)))+("IX",)#('', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX')
-            r+=thou[n//1000]if n>999 else str()
-            r+=h[int((n//100).__str__()[-1])]if n>99 else str()
-            r+=t[int((n//10).__str__()[-1])]if n>9 else str()
-            r+=o[int(n.__str__()[-1])]
+            r+=tuple(("".ljust(x,"M")for x in range(4)))[n//1000]if n>999 else str()
+                    #('', 'M', 'MM', 'MMM')
+            r+=tuple(("".ljust(x,"C")for x in range(4)))+("CD",)+tuple(("D".ljust(x+1,"C")for x in range(4)))+("CM",)[int((n//100).__str__()[-1])]if n>99 else str()
+                    #('', 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM')
+            r+=tuple(("".ljust(x,"X")for x in range(4)))+tuple(("L".rjust(2,"X")if x==0 else "L".ljust(x,"X")for x in range(5)))+("XC",)[int((n//10).__str__()[-1])]if n>9 else str()
+                    #('', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC')
+            r+=tuple(("".ljust(x,"I")for x in range(4)))+tuple(("V".rjust(2,"I")if x==0 else "V".ljust(x,"I")for x in range(5)))+("IX",)[int(n.__str__()[-1])]
+                    #('', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX')
             return r
         else:raise ValueError("only positive numbers are supported")
     else:raise ValueError("only numbers up to 3999 are supported")
