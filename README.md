@@ -60,3 +60,7 @@ In the root of this repository is a file called `clean_code.py` with some code i
 ### `fr`
 - The method name should be descriptive—rename it to “from_roman”
 > **Note**: To avoid having to rename every usage of a function or variable, most IDEs have a built-in “refactor” command—in VSCode, the keyboard shortcut is F2, and in PyCharm (and all JetBrains IDEs), it’s Shift + F6. Or, you can just right-click on the name of the variable or function and click “Rename” on VSCode, or hover over “Refactor” and click “Rename” on PyCharm.
+- The parameter name is unclear for a possible user of this method—rename it from `n` to something like `roman_number` and add a type hint, `: str`, since we know this should be a string.
+- Finally with the method signature, add a return-type hint—just after the parameters in parentheses, add ` -> int` before the colon so users know what type this method returns.
+- Next, variables inside the method. Rename `rn` to `roman_numeral` and `r` to `return_value` (or `retval` for a more C-like look).
+- Inside the loop signature, rename `i` to `index` and `c` to `character` so we can keep track of what’s what when we’re deep inside the method signature.
