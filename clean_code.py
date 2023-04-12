@@ -1,4 +1,4 @@
-def fr(n:str)->int:
+def fr(n):
     rn = n.lower() ; r = 0
     for i,c in enumerate(rn):
         match c:
@@ -40,7 +40,7 @@ def fr(n:str)->int:
                 r+=1000
             case _: raise ValueError("only numerals IVXLCDM are supported")
     return r
-def to(n:int)->str:
+def to(n):
     if n<4000:
         if n>0:
             r=str()
