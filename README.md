@@ -62,9 +62,9 @@ In the root of this repository is a file called `clean_code.py` with some code i
 > **Note**: To avoid having to rename every usage of a function or variable, most IDEs have a built-in “refactor” command—in VSCode, the keyboard shortcut is F2, and in PyCharm (and all JetBrains IDEs), it’s Shift + F6. Or, you can just right-click on the name of the variable or function and click “Rename” on VSCode, or hover over “Refactor” and click “Rename” on PyCharm.
 - The parameter name is unclear for a possible user of this method—rename it from `n` to something like `roman_number` and add a type hint, `: str`, since we know this should be a string.
 - Finally with the method signature, add a return-type hint—just after the parameters in parentheses, add ` -> int` before the colon so users know what type this method returns.
-- Next, variables inside the method. Rename `rn` to `roman_numeral` and `r` to `return_value` (or `retval` for a more C-like look).
+- Next, variables inside the method. Rename `rn` to `roman_numeral` and `r` to `return_value` (or `retval` for a more C-like feel).
 - Inside the loop signature, rename `i` to `index` and `c` to `character` so we can keep track of what’s what when we’re deep inside the method signature.
-- Now that everything is renamed, a lot of spacing conventions are messed up. To make this more readable, let’s…
+Now that everything is renamed, a lot of spacing conventions are messed up. To make this more readable, let’s…
   - move `return_value = 0` to a new line and remove the semicolon
   - add a space between `index,` and `character` on line 3
   - reduce the complexity of the ternary operator on line 6 by splitting it into multiple lines:
@@ -77,3 +77,18 @@ In the root of this repository is a file called `clean_code.py` with some code i
       		return_value += 9
        else: return_value += 1
     ```
+    - Repeat this change for every ternary operator, spacing them out and making them easier to read
+> **Note**: On most IDEs, you can create multiple cursors by holding Alt/Option while clicking in another location that lets you type the same thing in both of those places at once. Everywhere you see a space that needs to be added, you can alt-click to add a cursor there, and then by just pressing spacebar one time, you can clean up all of them. Try it!
+  - place spaces after every colon that introduces a one-liner code block (such as after `except IndexError:` and one-liner `if` statements)
+  - place spaces around `+=` operators
+The function should now look quite a bit longer, but significantly more readable. We’ll make the function shorter in a later step by refactoring out into methods, but for now, let’s move onto the next function.
+### `to`
+- Rename this function to `to_roman` to be consistent with the last, and rename the variable `n` to `arabic_number`
+- Refactor the `if n<4000` and `if n>0` statements into _guard clauses_, significantly reducing indentation in the method and making it easier to read, otherwise known as “fail fast,” by flipping the booleans (`if n>4000` and `if n<0`) and moving the `else` clauses’ `raise` statements up to the beginning, meaning the function should start like…
+```py
+def to_roman(arabic_number):
+	if arabic_number>4000:raise ValueError("only numbers up to 3999 are supported")
+	if arabic_number<0:raise ValueError("only positive numbers are supported")
+	# …```
+- Then, unindent the main code of the method by two tabs to be syntactically valid.
+> **Note**: On most IDEs and code editors, you can do this by highlighting all the code you want to unindent and pressing Shift + Tab.
