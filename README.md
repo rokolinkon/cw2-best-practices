@@ -70,10 +70,10 @@ In the root of this repository is a file called `clean_code.py` with some code i
   - reduce the complexity of the ternary operator on line 6 by splitting it into multiple lines:
     - Add a line break after `try:`
     - Move the ternary operator to a regular `if` statement and space it out by rearranging it like…
-    	- ```py
+    ```py
        if roman_numeral[i+1] == ‘v’:
       		return_value += 4
        elif roman_numeral[i+1] == ‘x’:
       		return_value += 9
        else: return_value += 1
-      ```
+    ```
