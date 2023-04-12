@@ -64,3 +64,16 @@ In the root of this repository is a file called `clean_code.py` with some code i
 - Finally with the method signature, add a return-type hint—just after the parameters in parentheses, add ` -> int` before the colon so users know what type this method returns.
 - Next, variables inside the method. Rename `rn` to `roman_numeral` and `r` to `return_value` (or `retval` for a more C-like look).
 - Inside the loop signature, rename `i` to `index` and `c` to `character` so we can keep track of what’s what when we’re deep inside the method signature.
+- Now that everything is renamed, a lot of spacing conventions are messed up. To make this more readable, let’s…
+  - move `return_value = 0` to a new line and remove the semicolon
+  - add a space between `index,` and `character` on line 3
+  - reduce the complexity of the ternary operator on line 6 by splitting it into multiple lines:
+    - Add a line break after `try:`
+    - Move the ternary operator to a regular `if` statement and space it out by rearranging it like…
+    	- ```py
+       if roman_numeral[i+1] == ‘v’:
+      		return_value += 4
+       elif roman_numeral[i+1] == ‘x’:
+      		return_value += 9
+       else: return_value += 1
+      ```
