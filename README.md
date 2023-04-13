@@ -89,8 +89,32 @@ The function should now look quite a bit longer, but significantly more readable
 def to_roman(arabic_number):
 	if arabic_number > 4000: raise ValueError("only numbers up to 3999 are supported")
 	if arabic_number < 0: raise ValueError("only positive numbers are supported")
-	# …```
+	# …
+```
 - Then, unindent the main code of the function by two tabs to be syntactically valid.
 > **Note**: On most IDEs and code editors, you can do this by highlighting all the code you want to unindent and pressing Shift + Tab.
 - Now, the main code of the function. It’s quite a mess as it stands—there are insane, unnecessary list comprehensions happening to build the tuples of numerals, and they’re all in one line with the indexing and ternary operators. A good rule to follow is that making _readable_ code is always better than showing off how complicated of list comprehensions you can write (although this was my opportunity to do so). Let’s split this up into multiple lines and assign some variables so we’re not doing everything inline.
-  - 
+  - Make four new lines under `r=str()` to assign variables, and add…
+```py
+thousands =
+hundreds =
+tens =
+ones =
+```
+  - For each list comprehension, there’s a comment underneath showing a much more sensible way to assign these tuples that is much easier to read. Copy those and place them after the variable declarations, so it looks something like…
+```py
+thousands = ('', 'M', 'MM', 'MMM')
+hundreds = ('', 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM')
+tens = ('', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC')
+ones = ('', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX')
+```
+  - Now, use those variables instead of the list comprehensions. Replace everything from `tuple(` to the index with the floor division with the variables you’ve created in respective order, while also adding spaces around the operators and keywords. It should look like…
+```py
+r += thousands[arabic_number//1000] if arabic_number > 999 else str()
+r += hundreds[int((arabic_number//100).__str__()[-1])] if arabic_number > 99 else str()
+r += tens[int((arabic_number//10).__str__()[-1])] if arabic_number > 9 else str()
+r += ones[int(arabic_number.__str__()[-1])]
+```
+  - For better readability, convert all calls to `str()` into empty string literals, `""` or `''`.
+  - Rename `r` to `return_value`.
+  - Finally, flip the ternary operator so we don’t need the `else "”`—put the `if arabic_number > 999:` calls in front of the additions, so they should look like `if arabic_number > 999: r += thousands[arabic_number//1000]`. This should save on both readability and performance time, as the interpreter won’t spend time concatenating empty strings to the return value. 
