@@ -87,8 +87,10 @@ The function should now look quite a bit longer, but significantly more readable
 - Refactor the `if n<4000` and `if n>0` statements into _guard clauses_, significantly reducing indentation in the method and making it easier to read, otherwise known as “fail fast,” by flipping the booleans (`if n>4000` and `if n<0`) and moving the `else` clauses’ `raise` statements up to the beginning, meaning the function should start like…
 ```py
 def to_roman(arabic_number):
-	if arabic_number>4000:raise ValueError("only numbers up to 3999 are supported")
-	if arabic_number<0:raise ValueError("only positive numbers are supported")
+	if arabic_number > 4000: raise ValueError("only numbers up to 3999 are supported")
+	if arabic_number < 0: raise ValueError("only positive numbers are supported")
 	# …```
-- Then, unindent the main code of the method by two tabs to be syntactically valid.
+- Then, unindent the main code of the function by two tabs to be syntactically valid.
 > **Note**: On most IDEs and code editors, you can do this by highlighting all the code you want to unindent and pressing Shift + Tab.
+- Now, the main code of the function. It’s quite a mess as it stands—there are insane, unnecessary list comprehensions happening to build the tuples of numerals, and they’re all in one line with the indexing and ternary operators. A good rule to follow is that making _readable_ code is always better than showing off how complicated of list comprehensions you can write (although this was my opportunity to do so). Let’s split this up into multiple lines and assign some variables so we’re not doing everything inline.
+  - 
