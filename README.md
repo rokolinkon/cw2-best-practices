@@ -130,4 +130,5 @@ Though this code doesn’t necessarily represent a real-world object, we can sti
 - Run the file to make sure no error is raised
 
 Congratulations—this code is now object-oriented! That wasn’t so hard, right? But if you use an IDE with good Python linting, you may notice a squiggle under the `self` parameter you just added…
+
 ![image](https://user-images.githubusercontent.com/70546234/232331841-c4e1a416-31a5-4890-9e28-9d775c40e330.png)
