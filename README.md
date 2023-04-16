@@ -117,4 +117,16 @@ r += ones[int(arabic_number.__str__()[-1])]
 ```
   - For better readability, convert all calls to `str()` into empty string literals, `""` or `''`.
   - Rename `r` to `return_value` or `retval`.
-  - Finally, flip the ternary operator so we don’t need the `else ""`—put the `if arabic_number > 999:` calls in front of the additions, so they should look like `if arabic_number > 999: r += thousands[arabic_number//1000]`. This should save on both readability and performance time, as the interpreter won’t spend time concatenating empty strings to the return value. 
+  - Finally, flip the ternary operator so we don’t need the `else ""`—put the `if arabic_number > 999:` calls in front of the additions, so they should look like `if arabic_number > 999: r += thousands[arabic_number//1000]`. This should save on both readability and performance time, as the interpreter won’t spend time concatenating empty strings to the return value.
+The code is now much, much cleaner! Any given person could read it and understand what it’s doing and how it’s doing it—and it’s considerably easier to debug. But we’re not done with this code yet. It’s time for…
+
+## Object-Orientation
+Though this code doesn’t necessarily represent a real-world object, we can still push it toward being object-oriented by refactoring it a bit. First of all, these two functions are related enough to be methods inside the same class:
+- At the top of the file, add a new line with a class declaration `class RomanNumeralConverter:`
+- Select the two method definitions and indent them
+- Add the `self` parameter as the first parameter to both methods
+- Above the assertion at the bottom of the file, instantiate the class, `converter = RomanNumeralConverter()`
+- Prefix the method calls with `converter.`
+- Run the file to make sure no error is raised
+
+Congratulations—this code is now object-oriented! That wasn’t so hard, right? But if you use an IDE with good Python linting, you may notice a squiggle under the `self` parameter you just added…
