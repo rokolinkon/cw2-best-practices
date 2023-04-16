@@ -116,5 +116,5 @@ r += tens[int((arabic_number//10).__str__()[-1])] if arabic_number > 9 else str(
 r += ones[int(arabic_number.__str__()[-1])]
 ```
   - For better readability, convert all calls to `str()` into empty string literals, `""` or `''`.
-  - Rename `r` to `return_value`.
+  - Rename `r` to `return_value` or `retval`.
   - Finally, flip the ternary operator so we don’t need the `else ""`—put the `if arabic_number > 999:` calls in front of the additions, so they should look like `if arabic_number > 999: r += thousands[arabic_number//1000]`. This should save on both readability and performance time, as the interpreter won’t spend time concatenating empty strings to the return value. 
