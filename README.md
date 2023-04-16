@@ -136,3 +136,45 @@ Congratulations—this code is now object-oriented! That wasn’t so hard, right
 ![image](https://user-images.githubusercontent.com/70546234/232331841-c4e1a416-31a5-4890-9e28-9d775c40e330.png)
 <!--make a tutorial where they add caching with dicts and end with them making an if name main method with a while-true loop so the caching actually makes sense -->
 This is because these two methods currently only have a tie to each other in terms of conceptual grouping—the linter claims they could be made _static_ because they don’t necessarily use any attributes of the class—instantiating the class to use the methods is pointless. So, instead of making these methods static, which defeats the purpose of object-orientation, let’s add a new feature to make them more a part of the object and less just a part of the class: caching!
+
+### Adding a caching system
+Of course, this will be a rather rudimentary cache and won’t make our script run a _ton_ faster, but it’ll be fun to do—and isn’t that what matters?
+
+- Push down the method definitions in `RomanNumeralConverter` a few lines to give us some room to add some instance variables
+- Add a constructor to initialize these variables:
+```py
+def __init__(self):
+  self.roman_to_arabic_cache = {}
+  self.arabic_to_roman_cache = {}
+```
+- Now, we have two cache variables to play with, and they were both initialized to empty dictionaries. Inside these dictionaries, we can store mappings of numerals we’ve already converted so that, if a user needs to convert the same thing again, we can pull from the cache instead of having to convert it anew every time.
+- But we don’t want users manually modifying these caches—let’s make them private by adding a double underscore to the beginning of their names.
+```py
+self.__roman_to_arabic_cache = {}
+self.__arabic_to_roman_cache = {}
+```
+- Now, we can add a system to let the user index the object they instantiate as though they were accessing the cache directly, using one of Python’s built-in “magic methods.”
+```py
+def __getitem__(self, item):
+  if type(item) is str:
+    return self.from_roman(item)
+  elif type(item) is int:
+    return self.to_roman(item)
+  else: raise ValueError("Cannot subscript RomanNumeralConverter with '%s', expected 'str' or 'int'"%type(item))
+```
+- Now, we can put to use the `self` parameter of our methods. At the beginning of the `from_roman` method, between the assignments of `roman_numeral` and `return_value` add a check into the cache:
+```py
+# …
+roman_numeral = roman_number.lower()
+if roman_numeral in self.__roman_to_arabic_cache.keys():
+    return self.__roman_to_arabic_cache[roman_numeral]
+return_value = 0
+# …
+```
+- At the bottom of the method, save the return value into the cache before returning it:
+```py
+# …
+    case _: raise ValueError("only numerals IVXLCDM are supported")
+self.__roman_to_arabic_cache[roman_numeral] = return_value
+return return_value
+```
