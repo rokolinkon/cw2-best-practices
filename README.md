@@ -178,3 +178,11 @@ return_value = 0
 self.__roman_to_arabic_cache[roman_numeral] = return_value
 return return_value
 ```
+- And do the same for the `to_roman` method—add a check into the cache after the guard clauses:
+```py
+# …
+if n < 0: raise ValueError("only positive numbers are supported")
+if arabic_number in self.__arabic_to_roman_cache.keys():
+    return self.__arabic_to_roman_cache[arabic_number]
+return_value = ""
+```
