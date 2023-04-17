@@ -186,3 +186,10 @@ if arabic_number in self.__arabic_to_roman_cache.keys():
     return self.__arabic_to_roman_cache[arabic_number]
 return_value = ""
 ```
+- And save values into the cache after converting them
+```py
+# …
+return_value += ones[int(arabic_number.__str__()[-1])]
+self.__arabic_to_roman_cache[arabic_number] = return_value
+return return_value
+```
