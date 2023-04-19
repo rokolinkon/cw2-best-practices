@@ -3,6 +3,7 @@
 Welcome back again to another companion lab to the PowerPoint presentation! This part is considerably more _conceptual_ than the previous two labs we’ve done, which made much more sense to be hands-on considering they were all about learning the ins and outs of working with Git, but since there were some coding concepts in this one, too, and doing things is a good way to remember them, here we are! Fork this repository as usual, clone it to your local machine (if using the GitHub CLI, which will be optionally included throughout the lab, you can use `gh repo clone your-username/cw2-best-practices`), and if you’re using the web, make sure to have the GitHub page for the forked repository open.
 
 ---
+# Section 1: Setup
 
 ## Branching
 ### Master Branch Protection
@@ -54,6 +55,7 @@ And create the issue! Or, if you use the CLI, you can do this all in one command
 
 ![image](https://user-images.githubusercontent.com/70546234/230190022-95c816c9-1f25-4a04-864a-b3abba55d096.png)
 
+# Section 2: Refactoring
 
 ## Clean Code
 In the root of this repository is a file called `clean_code.py` with some code in it that is considerably _not_ clean. Still on our `clean-code` branch, refactor this file to better follow some PEP 8 standards:
