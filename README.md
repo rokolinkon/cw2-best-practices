@@ -243,7 +243,7 @@ Or, do this all via the GitHub CLI, while on the `dev` branch:
 
 ![image](https://user-images.githubusercontent.com/70546234/234109648-1f7f75cb-361f-42ba-9798-48042dc9b5fe.png)
 
-… and to merge it …
+… and to merge it, after switching to `master` …
 
 `gh pr merge -t "merge commit text"`
 
