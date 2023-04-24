@@ -57,3 +57,7 @@ def to(n):
     else:raise ValueError("only numbers up to 3999 are supported")
 
 assert fr(to(the:=900))==the,"NO it's %d"%fr(to(the))
+
+
+class RomanNumeralConverter:
+    pass
