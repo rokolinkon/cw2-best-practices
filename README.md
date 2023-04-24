@@ -209,5 +209,10 @@ while True:
     print(converter[number])
 ```
 
+# Section 3: Merging
+
+## Merge `clean-code` back into `dev`
+And now the branches from earlier come back! Just as mentioned at the very beginning, merge `clean-code` back into our intermediary branch, `dev`: `git switch dev && git merge clean-code`.
+
 ## Congrats!
 Hey, you’ve reached the end! Hopefully this was helpful—it is considerably more conceptual than the previous two labs were. The next one should be more hands-on — for those of you who read this far, you get a sneak peek — we’ll be talking about unit testing. I know, I know, no one likes writing unit tests; why would I write code to test my own code? That’s just taking away from development time! I know. That’s what people say. And it’ll feel like that. And unit testing is *not* infallible. But it *is* a good thing to go about doing. We’ll talk about it when we get there. For now, nice job on this lab!
