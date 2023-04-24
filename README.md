@@ -221,6 +221,14 @@ And now the branches from earlier come back! Just as mentioned at the very begin
 Since we set up branch protection on GitHub, we’ll have to merge our changes back into `master` via a _pull request_. To make one on the web…
 - On the GitHub page of your repository, click “Pull Requests”
 
+![image](https://user-images.githubusercontent.com/70546234/234106571-65e509fb-0433-46df-96c7-fecd8ddcc554.png)
+
+![image](https://user-images.githubusercontent.com/70546234/234106787-b3ccb413-5f7a-4e4d-9643-e19488f82b7e.png)
+
+![image](https://user-images.githubusercontent.com/70546234/234106873-133b5696-6ee9-492c-9260-b21113da91aa.png)
+
+![image](https://user-images.githubusercontent.com/70546234/234107177-c8d91e99-60a7-4cbd-986d-e3ccfe2d2abd.png)
+
 
 ## Congrats!
 Hey, you’ve reached the end! Hopefully this was helpful—it is considerably more conceptual than the previous two labs were. The next one should be more hands-on — for those of you who read this far, you get a sneak peek — we’ll be talking about unit testing. I know, I know, no one likes writing unit tests; why would I write code to test my own code? That’s just taking away from development time! I know. That’s what people say. And it’ll feel like that. And unit testing is *not* infallible. But it *is* a good thing to go about doing. We’ll talk about it when we get there. For now, nice job on this lab!
