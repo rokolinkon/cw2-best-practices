@@ -206,7 +206,8 @@ converter = RomanNumeralConverter()
 while True:
     number = input("Input a number to convert or ‘q’ to quit\n>> ")
     if number == 'q': break
-    print(converter[number])
+    try: print(converter[int(number)])
+    except ValueError: print(converter[number])
 ```
 
 # Section 3: Merging
