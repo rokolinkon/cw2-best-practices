@@ -10,5 +10,4 @@ class TestRomanNumeralConverter(TestCase):
         del self.converter
 
 
-if __name__ == '__main__':
-    main()
+if __name__ == '__main__': main()
