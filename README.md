@@ -136,7 +136,7 @@ Though this code doesn’t necessarily represent a real-world object, we can sti
 Congratulations—this code is now object-oriented! That wasn’t so hard, right? But if you use an IDE with good Python linting, you may notice a squiggle under the methods with the `self` parameter you just added…
 
 ![image](https://user-images.githubusercontent.com/70546234/232331841-c4e1a416-31a5-4890-9e28-9d775c40e330.png)
-<!--make a tutorial where they add caching with dicts and end with them making an if name main method with a while-true loop so the caching actually makes sense -->
+
 This is because these two methods currently only have a tie to each other in terms of conceptual grouping—the linter claims they could be made _static_ because they don’t necessarily use any attributes of the class—instantiating the class to use the methods is pointless. So, instead of making these methods static, which defeats the purpose of object-orientation, let’s add a new feature to make them more a part of the object and less just a part of the class: caching!
 
 ### Adding a caching system
