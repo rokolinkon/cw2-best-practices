@@ -241,9 +241,13 @@ Or, do this all via the GitHub CLI, while on the `dev` branch:
 
 `gh pr create -t "refactoring changes" -b "also adds a caching system and closes #1"`
 
+![image](https://user-images.githubusercontent.com/70546234/234109648-1f7f75cb-361f-42ba-9798-48042dc9b5fe.png)
+
 … and to merge it …
 
-`gh pr merge 2`
+`gh pr merge -t "merge commit text"`
+
+![image](https://user-images.githubusercontent.com/70546234/234109835-34acc7da-da63-40d8-9188-8ee6e861c20b.png)
 
 
 ## Congrats!
