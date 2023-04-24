@@ -223,11 +223,27 @@ Since we set up branch protection on GitHub, we’ll have to merge our changes b
 
 ![image](https://user-images.githubusercontent.com/70546234/234106571-65e509fb-0433-46df-96c7-fecd8ddcc554.png)
 
+- Then “New pull request”
+
 ![image](https://user-images.githubusercontent.com/70546234/234106787-b3ccb413-5f7a-4e4d-9643-e19488f82b7e.png)
+
+- Select the `dev` branch as the compare
 
 ![image](https://user-images.githubusercontent.com/70546234/234106873-133b5696-6ee9-492c-9260-b21113da91aa.png)
 
+- Write a good description, and include a _closing keyword_ for the issue we created earlier, as this pull request fixes that issue. Here, I used “resolves #1,” but other valid keywords include “fixes” and “closes.”
+
 ![image](https://user-images.githubusercontent.com/70546234/234107177-c8d91e99-60a7-4cbd-986d-e3ccfe2d2abd.png)
+
+- Create the pull request, merge it, and we’re done! Notice that issue #1 should now be closed.
+
+Or, do this all via the GitHub CLI, while on the `dev` branch:
+
+`gh pr create -t "refactoring changes" -b "also adds a caching system and closes #1"`
+
+… and to merge it …
+
+`gh pr merge 2`
 
 
 ## Congrats!
