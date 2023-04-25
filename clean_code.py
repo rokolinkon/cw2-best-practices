@@ -4,7 +4,7 @@ def fr(n):
         match c:
             case 'i':
                 try: r+=4 if rn[i+1]=='v'else 9 if rn[i+1]=='x'else 1
-                except IndexError: pass
+                except IndexError: r+=1
                 else: continue
             case 'v':
                 try:
