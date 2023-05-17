@@ -42,7 +42,7 @@ Let’s create an Issue for a feature we’re about to add. On the GitHub page f
 ![image](https://user-images.githubusercontent.com/70546234/230183191-681529ef-ee5d-4171-9f14-02a003b7643b.png)
 
 
-Then "New issue"
+Then “New issue”
 
 ![image](https://user-images.githubusercontent.com/70546234/230183343-448f771a-c527-401b-a86d-27fa07273854.png)
 
