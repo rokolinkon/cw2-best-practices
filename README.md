@@ -75,9 +75,9 @@ Now that everything is renamed, a lot of spacing conventions are messed up. To m
     - Add a line break after `try:`
     - Move the ternary operator to a regular `if` statement and space it out by rearranging it like…
     ```py
-       if roman_numeral[i+1] == ‘v’:
+       if roman_numeral[i+1] == 'v':
       		return_value += 4
-       elif roman_numeral[i+1] == ‘x’:
+       elif roman_numeral[i+1] == 'x':
       		return_value += 9
        else: return_value += 1
     ```
