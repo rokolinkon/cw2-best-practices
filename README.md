@@ -199,7 +199,7 @@ return return_value
 ### A simple main method
 - Now, to illustrate usage of an object-oriented class, we’ll make a simple main method to test it out.
 - Remove the assertion down at the bottom, and in its place, add `if __name__ == "__main__":`
-> `if __name__ == “__main__”` is a Python convention to determine the entry-point in a program. This prevents code from being run on import, and if it’s present in a script, lets readers of the code know that it can be run.
+> `if __name__ == "__main__"` is a Python convention to determine the entry-point in a program. This prevents code from being run on import, and if it’s present in a script, lets readers of the code know that it can be run.
 - Under that, add an infinite loop until the user manually breaks out so the cache can take effect, with some code to get the input and print out the results…
 ```py
 converter = RomanNumeralConverter()
