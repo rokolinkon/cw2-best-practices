@@ -92,11 +92,11 @@ Now that everything is renamed, a lot of spacing conventions are messed up. To m
 The function should now look quite a bit longer, but significantly more readable. We’ll make the function shorter in a later step by refactoring out into methods, but for now, let’s move onto the next function.
 ### `to`
 - Rename this function to `to_roman` to be consistent with the last, and rename the variable `n` to `arabic_number`
-- Refactor the `if n<4000` and `if n>0` statements into _guard clauses_, significantly reducing indentation in the method and making it easier to read, otherwise known as “fail fast,” by flipping the booleans (`if n>4000` and `if n<0`) and moving the `else` clauses’ `raise` statements up to the beginning, meaning the function should start like…
+- Refactor the `if n<4000` and `if n>0` statements into _guard clauses_, significantly reducing indentation in the method and making it easier to read, otherwise known as “fail fast,” by flipping the booleans (`if n>=4000` and `if n<=0`) and moving the `else` clauses’ `raise` statements up to the beginning, meaning the function should start like…
 ```py
 def to_roman(arabic_number):
-	if arabic_number > 4000: raise ValueError("only numbers up to 3999 are supported")
-	if arabic_number < 0: raise ValueError("only positive numbers are supported")
+	if arabic_number >= 4000: raise ValueError("only numbers up to 3999 are supported")
+	if arabic_number <= 0: raise ValueError("only positive numbers are supported")
 	# …
 ```
 - Then, unindent the main code of the function by two tabs to be syntactically valid.
