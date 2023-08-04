@@ -39,6 +39,10 @@ For this exercise, let’s make a feature branch and call it `clean-code`, for a
 ## Card Tracking
 Let’s create an Issue for a feature we’re about to add. On the GitHub page for your repository, click “Issues.”
 
+> **Note**: If you can't see the issues button, try going to the repository settings and enabling Issues.
+> ![image](https://github.com/rokolinkon/cw2-best-practices/assets/70546234/c7a56483-782a-4db0-884e-d358068d2bd3)
+
+
 ![image](https://user-images.githubusercontent.com/70546234/230183191-681529ef-ee5d-4171-9f14-02a003b7643b.png)
 
 
